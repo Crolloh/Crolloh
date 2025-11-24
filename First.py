@@ -195,7 +195,7 @@ def user_pass():
     break
    
 user_pass() #call the function to activate it 
-
+#more functions
 def statement1():
    Input1 = input('what is your favorite subject?: \nA) math\nB) science')
    if Input1.upper() == 'A':
@@ -204,5 +204,35 @@ def statement1():
       print('Same I lke science too!')
    else:
       print('Wrong input')
-
 statement1()
+#function to see if prime number
+def is_prime(n):
+    if n <= 1:
+        print('This is not a prime number.')
+        return
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            print('This is not a prime number.')
+            return
+    print('This is a prime number.')
+
+is_prime(50)
+#Calculator 
+
+def calculator(num1, num2, operator):
+   while True:
+      if operator == "+":
+         return num1 + num2
+      elif operator == '-':
+         return num1 - num2
+      elif operator == 'x':
+         return num1 * num2
+      elif operator == '/':
+         if num2 == 0:
+            raise ValueError('Division by zero.')
+         return num1 / num2
+      else:
+         raise ValueError('Unsupported operator.')
+      
+print(calculator(1, 2, "+"))
+
